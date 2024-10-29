@@ -47,7 +47,7 @@ const App = () => {
 | :---------------- | :----------------------- | :----------------------------------- | :------------------------------------------------------------------------------------------ |
 | `className`       | `string`                 |                                      | Specify a className for the whole DatePicker component.                                     |
 | `color`           | `string`                 | `#284387` (dark theme: `#6988d6`)   | Set the primary UI color.                                                                   |
-| `customLocale`    | `Object`                 | `null`                               | Set your own translations. [Example](#💬-localization) |
+| `customLocale`    | `Object`                 | `null`                               | Set your own translations. [Example](#-localization) |
 | `dateFormat`      | `string`                 | Based on browser locale             | Format the selected date shown in the input. Example: `"DD. MM. YYYY"`. **DD** - day, **MM** - month, **YYYY** - year |
 | `disabled`        | `boolean`                | `false`                              | Disables the functionality.                                                                 |
 | `disabledDates`   | `array[date Object, ...]`|                                      | Specify dates that the user can't select.                                                   |
@@ -75,7 +75,7 @@ const App = () => {
 ### 💬 Localization
 
 #### **Example 1**: Pick between available locales
-> Available dates: English `en`, Czech `cs`, Slovak `sk`, German `de`, Spanish `es`, French `fr`
+> Available locales: English `en`, Czech `cs`, Slovak `sk`, German `de`, Spanish `es`, French `fr`
 
 ```js
 <DatePicker locale={"de"} />
@@ -123,7 +123,7 @@ Specify custom primary color that is used for the calendar icon, hover effects e
 
 You can also use `className`, `inputClassName` or `pickerClassName` 😉
 
-Check out all the [props](#📚-props)
+Check out all the [props](#-props)
 
 ### ⚙️ Usage within a \<form>
 
@@ -152,7 +152,7 @@ Check out all the [props](#📚-props)
 
 | Prop              | Type                     | Description                |
 | :--------         | :-------                 | :------------------------- |
-| `maxDate`         | `date Object             | A maximum date a user can select. (Can't select any dates after)  |
+| `maxDate`         | `date Object`            | A maximum date a user can select. (Can't select any dates after)  |
 | `minDate`         | `date Object`            | A minimum date a user can select. (Can't select any dates before) |
 | `disabledDates`   | `array[date Object, ...]`| Specify dates that the user can't select.
 

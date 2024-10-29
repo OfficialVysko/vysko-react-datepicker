@@ -244,11 +244,22 @@ const DatePicker = ({
             cs: [
                 "Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"
             ]
-            // Add more locales as needed
         };
         return customLocale && Array.isArray(customLocale.months) && customLocale.months.length >= 12
             ? customLocale.months.slice(0, 12)
             : translations[locale] || translations.en; // Fallback to English
+    }, [locale, customLocale]);
+
+    const localizedPlaceholder = useMemo(() => {
+        const translations = {
+            en: "Select a date",
+            cs: "Zvolte datum",
+            sk: "Zvoľte dátum",
+            de: "Datum auswählen",
+            es: "Seleccione una fecha",
+            fr: "Sélectionnez une date"
+        };
+        return translations[locale] || translations.en;
     }, [locale, customLocale]);
 
     const dayTranslations = useMemo(() => {
@@ -307,7 +318,7 @@ const DatePicker = ({
             }}>
             <button ref={buttonRef} type="button" className={`vysko-dateinput ${inputClassName || ""}`} onClick={() => { setPickerVisible(!pickerVisible) }}>
                 <input required={required} type="date" value={currentDate ? currentDate.toISOString().split('T')[0] : ''} onChange={() => { }} />
-                <p>{currentDate == null ? (placeholder || "Zvolte datum") : (dateFormat != undefined ? dateFormat.replace("DD", currentDate.getDate().toString()).replace("MM", (currentDate.getMonth() + 1).toString()).replace("YYYY", currentDate.getFullYear().toString())
+                <p>{currentDate == null ? (placeholder || localizedPlaceholder) : (dateFormat != undefined ? dateFormat.replace("DD", currentDate.getDate().toString()).replace("MM", (currentDate.getMonth() + 1).toString()).replace("YYYY", currentDate.getFullYear().toString())
                     : currentDate.toLocaleDateString())}</p>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.75 2.5C7.75 2.08579 7.41421 1.75 7 1.75C6.58579 1.75 6.25 2.08579 6.25 2.5V4.07926C4.81067 4.19451 3.86577 4.47737 3.17157 5.17157C2.47737 5.86577 2.19451 6.81067 2.07926 8.25H21.9207C21.8055 6.81067 21.5226 5.86577 20.8284 5.17157C20.1342 4.47737 19.1893 4.19451 17.75 4.07926V2.5C17.75 2.08579 17.4142 1.75 17 1.75C16.5858 1.75 16.25 2.08579 16.25 2.5V4.0129C15.5847 4 14.839 4 14 4H10C9.16097 4 8.41527 4 7.75 4.0129V2.5Z" fill="#1C274C" />
