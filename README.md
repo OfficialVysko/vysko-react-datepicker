@@ -79,13 +79,10 @@ const App = () => {
 | `value`           | `date Object`            |                                      | The current selected date.                                                                  |
 
 <br/>
-<br/>
 
 ## Practical examples
 
 ### 💬 Localization
-
-<br/>
 
 #### **Example 1**: Pick between available locales
 > Available locales: English `en`, Czech `cs`, Slovak `sk`, German `de`, Spanish `es`, French `fr`
@@ -109,8 +106,6 @@ Didn't find your language in the available languages or want to specify your own
 />
 ```
 
-<br/>
-
 #### **Example 3:** Custom date format
 Provide a string. **MM**, **DD** and **YYYY** symbols will be replaced with the selected date. The rest of the string will remain.
 > **DD** - day, **MM** - month, **YYYY** - year
@@ -122,18 +117,12 @@ Provide a string. **MM**, **DD** and **YYYY** symbols will be replaced with the 
     <DatePicker dateFormat={"MM-DD-YYYY"} />
 ```
 
-<br/>
-
 ### 🎨 Customize theme
-
-<br/>
 
 #### **Example 1:** Dark theme
 ```js
 <DatePicker theme={"dark"} />
 ```
-
-<br/>
 
 #### **Example 2:** Custom primary color
 Specify custom primary color that is used for the calendar icon, hover effects etc..
@@ -141,7 +130,6 @@ Specify custom primary color that is used for the calendar icon, hover effects e
 <DatePicker color={"#6988d6"}>
 ```
 
-<br/>
 
 You can also use `className`, `inputClassName` or `pickerClassName` 😉
 
