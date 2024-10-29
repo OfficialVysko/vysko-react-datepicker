@@ -16,7 +16,7 @@ Developed and maintained by [Jan Vyskočil](https://github.com/OfficialVysko) (a
 
 And much more! 
 
-![img](https://ibb.co/183QtG6)
+![img](https://i.ibb.co/qkzj3Y5/datepicker-demo.gif)
 
 ## Requirement
 
