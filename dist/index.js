@@ -225,9 +225,19 @@ var DatePicker = function DatePicker(_ref) {
       es: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
       fr: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
       cs: ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"]
-      // Add more locales as needed
     };
     return customLocale && Array.isArray(customLocale.months) && customLocale.months.length >= 12 ? customLocale.months.slice(0, 12) : translations[locale] || translations.en; // Fallback to English
+  }, [locale, customLocale]);
+  var localizedPlaceholder = (0, _react.useMemo)(function () {
+    var translations = {
+      en: "Select a date",
+      cs: "Zvolte datum",
+      sk: "Zvoľte dátum",
+      de: "Datum auswählen",
+      es: "Seleccione una fecha",
+      fr: "Sélectionnez une date"
+    };
+    return translations[locale] || translations.en;
   }, [locale, customLocale]);
   var dayTranslations = (0, _react.useMemo)(function () {
     var translations = {
@@ -284,7 +294,7 @@ var DatePicker = function DatePicker(_ref) {
     type: "date",
     value: currentDate ? currentDate.toISOString().split('T')[0] : '',
     onChange: function onChange() {}
-  }), /*#__PURE__*/_react["default"].createElement("p", null, currentDate == null ? placeholder || "Zvolte datum" : dateFormat != undefined ? dateFormat.replace("DD", currentDate.getDate().toString()).replace("MM", (currentDate.getMonth() + 1).toString()).replace("YYYY", currentDate.getFullYear().toString()) : currentDate.toLocaleDateString()), /*#__PURE__*/_react["default"].createElement("svg", {
+  }), /*#__PURE__*/_react["default"].createElement("p", null, currentDate == null ? placeholder || localizedPlaceholder : dateFormat != undefined ? dateFormat.replace("DD", currentDate.getDate().toString()).replace("MM", (currentDate.getMonth() + 1).toString()).replace("YYYY", currentDate.getFullYear().toString()) : currentDate.toLocaleDateString()), /*#__PURE__*/_react["default"].createElement("svg", {
     viewBox: "0 0 24 24",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg"
