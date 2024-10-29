@@ -1,7 +1,21 @@
 {
   "name": "vysko-react-datepicker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Modern customizable datepicker for react.",
+  "keywords": [
+    "react",
+    "date",
+    "datepicker",
+    "calendar",
+    "react-datepicker",
+    "date picker",
+    "date selection",
+    "UI components",
+    "react components",
+    "javascript",
+    "frontend",
+    "npm package"
+  ],
   "main": "dist/index.js",
   "style": "dist/style.css",
   "files": [
