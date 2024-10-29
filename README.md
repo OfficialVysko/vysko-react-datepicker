@@ -78,11 +78,14 @@ const App = () => {
 | `theme`           | `string`                 | `light`                              | Switch between `light` and `dark` theme.                                                    |
 | `value`           | `date Object`            |                                      | The current selected date.                                                                  |
 
-
+<br/>
+<br/>
 
 ## Practical examples
 
 ### 💬 Localization
+
+<br/>
 
 #### **Example 1**: Pick between available locales
 > Available locales: English `en`, Czech `cs`, Slovak `sk`, German `de`, Spanish `es`, French `fr`
@@ -93,7 +96,6 @@ const App = () => {
 ```
 
 #### **Example 2:** Custom translations
-
 Didn't find your language in the available languages or want to specify your own translations?
 
 ```js
@@ -107,6 +109,8 @@ Didn't find your language in the available languages or want to specify your own
 />
 ```
 
+<br/>
+
 #### **Example 3:** Custom date format
 Provide a string. **MM**, **DD** and **YYYY** symbols will be replaced with the selected date. The rest of the string will remain.
 > **DD** - day, **MM** - month, **YYYY** - year
@@ -118,12 +122,18 @@ Provide a string. **MM**, **DD** and **YYYY** symbols will be replaced with the 
     <DatePicker dateFormat={"MM-DD-YYYY"} />
 ```
 
+<br/>
+
 ### 🎨 Customize theme
+
+<br/>
 
 #### **Example 1:** Dark theme
 ```js
 <DatePicker theme={"dark"} />
 ```
+
+<br/>
 
 #### **Example 2:** Custom primary color
 Specify custom primary color that is used for the calendar icon, hover effects etc..
@@ -131,20 +141,24 @@ Specify custom primary color that is used for the calendar icon, hover effects e
 <DatePicker color={"#6988d6"}>
 ```
 
+<br/>
+
 You can also use `className`, `inputClassName` or `pickerClassName` 😉
 
 Check out all the [props](#-props)
 
+<br/>
+
 ### ⚙️ Usage within a \<form>
 
-
+<br/>
 
 | Prop        | Type     | Description                |
 | :--------   | :------- | :------------------------- |
 | `inputName` | `string` | Input's name - accessible in `formData` or `input[name=""]` selector etc. |
 | `required`  | `boolean`| Set if input is required to submit a form. |
 
-
+<br/>
 
 ```js
     const submitForm = (formData) => {
@@ -164,6 +178,7 @@ Check out all the [props](#-props)
 
 ### 📅 Limit date selection
 
+<br/>
 
 
 | Prop              | Type                     | Description                |
@@ -172,7 +187,7 @@ Check out all the [props](#-props)
 | `minDate`         | `date Object`            | A minimum date a user can select. (Can't select any dates before) |
 | `disabledDates`   | `array[date Object, ...]`| Specify dates that the user can't select.
 
-
+<br/>
 
 ```js
     <DatePicker
@@ -185,9 +200,11 @@ Check out all the [props](#-props)
     />
 ```
 
+<br/>
+
 ### ⚙️ Event handlers
 
-
+<br/>
 
 | Prop              | Type       | Description                                          |
 | :--------         | :--------- | :--------------------------------------------------- |
@@ -197,7 +214,7 @@ Check out all the [props](#-props)
 | `onOpen`          | `function` | Function that is called when the datepicker opens.   |
 | `onYearChange`    | `function` | Function that is called when the year changes.       |
 
-
+<br/>
 
 ```js
     import { useState } from "react";
