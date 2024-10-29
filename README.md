@@ -7,6 +7,7 @@ In that case, this simple customizable datepicker is for you!
 Developed and maintained by [Jan Vyskočil](https://github.com/OfficialVysko) (aka. Vysko).
 
 
+
 ## Features
 
 - 🎨 **Theming**: Choose between light and dark themes and specify your own primary color for the text and icons.
@@ -18,9 +19,13 @@ And much more!
 
 ![img](https://i.ibb.co/qkzj3Y5/datepicker-demo.gif)
 
+
+
 ## Requirement
 
 To use `vysko-react-datepicker`, you must use `react@16.8.0` or greater which includes hooks.
+
+
 
 ## **Instalation**
 
@@ -29,6 +34,8 @@ $ npm install vysko-react-datepicker
 # or
 $ yarn add vysko-react-datepicker
 ```
+
+
 
 ## 📘 Basic example
 
@@ -39,6 +46,8 @@ const App = () => {
     return <DatePicker />
 }
 ```
+
+
 
 ## 📚 Props
 
@@ -68,6 +77,7 @@ const App = () => {
 | `required`        | `boolean`                | `false`                              | Set if input is required to submit a form.                                                  |
 | `theme`           | `string`                 | `light`                              | Switch between `light` and `dark` theme.                                                    |
 | `value`           | `date Object`            |                                      | The current selected date.                                                                  |
+
 
 
 ## Practical examples
@@ -127,10 +137,14 @@ Check out all the [props](#-props)
 
 ### ⚙️ Usage within a \<form>
 
+
+
 | Prop        | Type     | Description                |
 | :--------   | :------- | :------------------------- |
 | `inputName` | `string` | Input's name - accessible in `formData` or `input[name=""]` selector etc. |
 | `required`  | `boolean`| Set if input is required to submit a form. |
+
+
 
 ```js
     const submitForm = (formData) => {
@@ -150,11 +164,15 @@ Check out all the [props](#-props)
 
 ### 📅 Limit date selection
 
+
+
 | Prop              | Type                     | Description                |
 | :--------         | :-------                 | :------------------------- |
 | `maxDate`         | `date Object`            | A maximum date a user can select. (Can't select any dates after)  |
 | `minDate`         | `date Object`            | A minimum date a user can select. (Can't select any dates before) |
 | `disabledDates`   | `array[date Object, ...]`| Specify dates that the user can't select.
+
+
 
 ```js
     <DatePicker
@@ -169,6 +187,8 @@ Check out all the [props](#-props)
 
 ### ⚙️ Event handlers
 
+
+
 | Prop              | Type       | Description                                          |
 | :--------         | :--------- | :--------------------------------------------------- |
 | `onChange`        | `function` | Function that is called when the value.              |
@@ -176,6 +196,8 @@ Check out all the [props](#-props)
 | `onMonthChange`   | `function` | Function that is called when the month changes.      |
 | `onOpen`          | `function` | Function that is called when the datepicker opens.   |
 | `onYearChange`    | `function` | Function that is called when the year changes.       |
+
+
 
 ```js
     import { useState } from "react";
